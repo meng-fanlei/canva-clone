@@ -1,9 +1,12 @@
 import { Canvas, FabricObject, Rect, Shadow } from "fabric";
 import { useCallback, useState } from "react";
+import { useAutoResize } from "./use-auto-resize";
 
 export const useEditor = () => {
   const [canvas, setCanvas] = useState<Canvas | null>(null);
   const [container, setContainer] = useState<HTMLDivElement | null>(null);
+
+  useAutoResize({ canvas, container });
 
   const init = useCallback(
     ({
