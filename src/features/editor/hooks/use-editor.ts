@@ -1,4 +1,4 @@
-import { Canvas, FabricObject, Rect, Shadow } from "fabric";
+import { Canvas, InteractiveFabricObject, Rect, Shadow } from "fabric";
 import { useCallback, useState } from "react";
 import { useAutoResize } from "./use-auto-resize";
 
@@ -16,8 +16,8 @@ export const useEditor = () => {
       initialCanvas: Canvas;
       initialContainer: HTMLDivElement;
     }) => {
-      FabricObject.ownDefaults = {
-        ...FabricObject.ownDefaults,
+      InteractiveFabricObject.ownDefaults = {
+        ...InteractiveFabricObject.ownDefaults,
         cornerColor: "#FFF",
         cornerStyle: "circle",
         borderColor: "#3b82f6",

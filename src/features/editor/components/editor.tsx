@@ -4,6 +4,7 @@ import { Canvas } from "fabric";
 import { useEffect, useRef } from "react";
 
 import { useEditor } from "../hooks/use-editor";
+import { Footer } from "./footer";
 import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
 import { Toolbar } from "./toolbar";
@@ -40,6 +41,7 @@ export const Editor = () => {
           <div className="flex-1 h-full bg-muted" ref={containerRef}>
             <canvas ref={canvasRef} />
           </div>
+          <Footer />
         </main>
       </div>
     </div>
